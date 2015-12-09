@@ -210,6 +210,7 @@
             this.btnPosNeg.TabIndex = 15;
             this.btnPosNeg.Text = "+/-";
             this.btnPosNeg.UseVisualStyleBackColor = true;
+            this.btnPosNeg.Click += new System.EventHandler(this.btnPosNeg_Click);
             // 
             // btnSqrt
             // 
