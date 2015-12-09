@@ -144,6 +144,10 @@ namespace BasicCalculator
             {
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
         }
 
 
@@ -172,11 +176,22 @@ namespace BasicCalculator
             {
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
         }
         //handler for sqrt button
         private void btnSqrt_Click(object sender, EventArgs e)
         {
-            txtEntryViewer.Text = Convert.ToString(calculator.SquareRoot());
+            try
+            {
+                txtEntryViewer.Text = Convert.ToString(calculator.SquareRoot());
+            }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
         }
         //handler for plus/minus button
         private void btnPosNeg_Click(object sender, EventArgs e)
